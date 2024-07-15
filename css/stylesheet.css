@@ -144,7 +144,7 @@ ul {
     }
 }
 
-/* CSS */
+/* button CSS */
 .button {
     align-items: center;
     background-color: #fff;
@@ -203,3 +203,22 @@ ul {
     color: black;
     text-decoration: none;
 } 
+
+/* set about page header to be inline */
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    display: inline-block;
+    width: clamp(24px, 5vw, 40px);
+    height: clamp(24px, 5vw, 40px);
+    margin-left: 25px;
+    vertical-align: middle;
+}
+
+.header h1 {
+    display: inline-block;
+    margin: 0;
+}
