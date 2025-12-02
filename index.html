@@ -8,26 +8,35 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wdth,wght@0,18..144,112,300..900;1,18..144,112,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="about"> 
-        <h1 id="heading">hi, i'm peng.</h1>
-        <p>currently studying computer science @ the university of auckland,</p>
-        <p>with a focus on theoretical computer science & software development.</p>
+    <div class="top-bar">
+        <div class="header">
+            <h1 id="heading">PENG ZHANG</h1>
+            <a href="https://github.com/PengZhangg" target="_blank">
+                <img src="img/github.png" alt="github" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/pengzhangg/" target="_blank">
+                <img src="img/linkedin.png" alt="linkedin" class="icon">
+            </a>
+        </div>
+
+        <div class="nav">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="nav-list">
+                <li class="navItem"><a href="index.html" class="navItem active" page-name="home">Home</a></li>
+                <li class="navItem"><a href="projects.html" class="navItem" page-name="projects">Projects</a></li>
+                <li class="navItem"><a href="contact.html" class="navItem" page-name="contact">Contact</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="nav">
-        <button class="nav-toggle" aria-label="Toggle navigation">
-            ☰
-        </button>
-       <ul class="nav-list">
-            <li class="navItem"><a href="index.html" class="navItem">home</a></li>
-            <li class="navItem"><a href="about.html" class="navItem">about</a></li>
-            <li class="navItem"><a href="projects.html" class="navItem">projects</a></li>
-            <li class="navItem"><a href="contact.html" class="navItem">contact</a></li>
-        </ul> 
-    </div>
+    
+    <div id="content"></div>
+    
     <script src="js/burgerMenu.js"></script>
+    <script src="js/pageLoader.js"></script>
 </body>
 </html>
-
