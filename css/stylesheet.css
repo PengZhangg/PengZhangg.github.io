@@ -233,9 +233,12 @@ a {
    so text sits on the light sky instead of the dark hills */
 @media (max-aspect-ratio: 1/1) {
     body::before {
-        background-size: auto 55vh;
+        /* photo height: 55vh, but never narrower than the screen (photo is 3:2) */
+        --photo-h: max(55vh, 66.67vw);
+        --photo-top: calc(100vh - var(--photo-h));
+        background-size: auto var(--photo-h);
         background-position: 60% 100%;
-        -webkit-mask-image: linear-gradient(to bottom, transparent 45vh, #000 55vh);
-        mask-image: linear-gradient(to bottom, transparent 45vh, #000 55vh);
+        -webkit-mask-image: linear-gradient(to bottom, transparent var(--photo-top), #000 calc(var(--photo-top) + 10vh));
+        mask-image: linear-gradient(to bottom, transparent var(--photo-top), #000 calc(var(--photo-top) + 10vh));
     }
 }
